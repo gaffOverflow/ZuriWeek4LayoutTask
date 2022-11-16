@@ -1,0 +1,136 @@
+:root{
+  --background: #e8ecf2;
+  --width: clamp(30rem, 50%, 40rem);
+  --orange: hsl(31, 77%, 52%);
+  --lightGreen:  hsl(184, 100%, 22%);
+  --darkGreen: hsl(179, 100%, 13%);
+  --box-shadow: box-shadow: 1px 1px 5px #999;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: grid;
+  place-items: center;
+  background: var(--background);
+  transition: .6s;
+  min-height: 100vh;
+}
+
+main{
+  display: grid;
+  gap: .5em;
+  padding: 1em;
+  width: var(--width);
+  
+}
+div{
+  padding: 2em 5em;
+  transition: 1.10s;
+  }
+.a{
+  background: var(--background);
+  color: var(--background);
+  box-shadow: 1px 1px 5px #222;
+}
+.b{
+  background: var(--background);
+  color: var(--background);
+  box-shadow: 1px 1px 5px #444;
+}
+.c{
+  background: var(--background);
+  color: var(--background);
+  box-shadow: 1px 1px 7px #666;
+}
+.d{
+  background: var(--background);
+  color: var(--background);
+  box-shadow: 1px 1px 9px #888;
+}
+.e{
+  background: var(--background);
+  color: var(--background);
+  box-shadow: 1px 2px 12px #999;
+}
+
+
+button {
+  padding: 0.8em 1.5em;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: inset -1px -1px 9px hsla(179, 100%, 13%, 0.426), 1px 1px 9px #888;
+  color: hsl(31, 77%, 52%);
+  border: 5px solid #e8ecf2;
+  transition: .60s;
+  cursor: pointer;
+  font-family: 'Lexend Deca', sans-serif;
+}
+button:hover {
+  box-shadow: inset -1px -1px 3px hsla(179, 100%, 13%, 0.426), 1px 1px 2px #888;
+  color: hsl(179, 100%, 13%);
+  border: 5px solid #e8ecf2;
+}
+
+i{
+  color: grey;
+  padding-right: .5em;
+}
+
+footer {
+
+}
+
+/* desktop */
+
+@media (min-width: 580px){
+  body{
+    background: var(--background);
+  }
+  main{
+    width: clamp(40rem, 50%, 65rem);
+    grid-template-areas: 
+    'a a a a b b'
+    'c c c d d d'
+    'c c c e e e'
+    ;
+  } 
+ 
+  .a{
+  background: var(--orange);
+  color: var(--orange);
+  grid-area: a;
+  height: 9rem;
+}
+.b{
+  background: var(--lightGreen);
+  color: var(--lightGreen);
+  grid-area: b;
+}
+.c{
+  background: var(--darkGreen);
+  color: var(--darkGreen);
+  grid-area: c;
+}
+.d{
+  background: var(--background);
+  color: var(--background);
+  box-shadow: 1px 1px 5px #444;
+  grid-area: d;
+}
+.e{
+  background: var(--background);
+  color: var(--background);
+  box-shadow: 1px 1px 5px #999;
+  grid-area: e;
+}
+  footer{
+    margin-top: -80px;
+  }
+  button{
+    padding: .3em 1em;
+  }
+}

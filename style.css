@@ -1,0 +1,186 @@
+:root {
+  --BrightOrange: hsl(31, 77%, 52%);
+  --DaryCyan: hsl(184, 100%, 22%);
+  --VeryDarkCyan: hsl(179, 100%, 13%);
+  --paragraph-TW: hsla(0, 0%, 100%, 0.75);
+  --Background-heading-button-VLG: hsl(0, 0%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* typography */
+
+h1 {
+  color: var(--Background-heading-button-VLG);
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+p {
+  color: var(--paragraph-TW);
+  line-height: 25px;
+  padding-right: 2em;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+footer p {
+  color: var(--VeryDarkCyan);
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: var(--BrightOrange);
+}
+
+/* body */
+
+body {
+  background: var(--Background-heading-button-VLG);
+  padding: 3em 14em;
+  min-width: 667px;
+  position: relative;
+}
+
+/* main */
+
+main {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* cards */
+
+div {
+  flex: 1 1 300px;
+  height: 28rem;
+  padding: 2rem;
+/*   background: yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* first card */
+
+.first-card {
+  background: var(--BrightOrange);
+  border-radius: 15px 0 0 0;
+}
+
+/* second card */
+
+.second-card {
+  background: var(--DaryCyan);
+  border-radius: 0 15px 0 0;
+}
+
+/* .third card */
+
+.third-card {
+  background: var(--VeryDarkCyan);
+  border-radius: 0 0 15px 15px;
+}
+
+/* button */
+
+button {
+  padding: 0.7em 2.5em;
+  border-radius: 30px;
+  border: none;
+}
+
+/* first card button */
+
+.first-card button {
+  color: var(--BrightOrange);
+  transition: 0.3s;
+}
+
+.first-card button:hover {
+  background: hsl(31, 100%, 66%);
+  color: var(--Background-heading-button-VLG);
+}
+/* second card button */
+
+.second-card button {
+  color: var(--DaryCyan);
+  transition: 0.3s;
+}
+
+.second-card button:hover {
+  background: hsl(184, 100%, 31%);
+  color: var(--Background-heading-button-VLG);
+}
+/* first card button */
+
+.first-card button {
+  color: var(--BrightOrange);
+  transition: 0.3s;
+}
+
+.first-card button:hover {
+  background: hsl(31, 100%, 66%);
+  color: var(--Background-heading-button-VLG);
+}
+/* third card button */
+
+.third-card button {
+  color: var(--VeryDarkCyan);
+  transition: 0.3s;
+}
+
+.third-card button:hover {
+  background: hsl(179, 100%, 25%);
+  color: var(--Background-heading-button-VLG);
+}
+
+/* desktop */
+
+@media (min-width: 1348px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first-card {
+    border-radius: 15px 0 0 15px;
+  }
+
+  .second-card {
+    border-radius: 0 0 0 0;
+  }
+
+  .third-card {
+    border-radius: 0 15px 15px 0;
+  }
+}
+
+/* mobile */
+
+@media (max-width: 1047px) {
+  .first-card {
+    border-radius: 15px 15px 0 0;
+  }
+  .second-card {
+    border-radius: 0 0 0 0;
+  }
+  .third-card {
+    border-radius: 0 0 15px 15px;
+  }
+}
